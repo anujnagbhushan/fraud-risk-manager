@@ -38,9 +38,9 @@ The system:
 
 ---
 
-## 🎥 5-Minute Demo
+## 🎥 Demo Video
 
-[Watch the 5-minute project demo](https://youtu.be/LVoyHEVfVZU)
+[Watch the project demo](https://youtu.be/LVoyHEVfVZU)
 
 ---
 
