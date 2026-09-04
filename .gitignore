@@ -1,0 +1,19 @@
+# data & models (too large / regenerable — don't commit)
+data/raw/*.csv
+data/processed/*.csv
+models/*.pkl
+models/*.joblib
+
+# python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+venv/
+__pycache__/
+*.pyc
+data/raw/creditcard.csv
+.DS_Store
