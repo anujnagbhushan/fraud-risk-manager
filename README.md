@@ -40,8 +40,6 @@ The system:
 
 ## 🎥 5-Minute Demo
 
-> Add the final YouTube video link here.
-
 [Watch the 5-minute project demo](https://youtu.be/LVoyHEVfVZU)
 
 ---
@@ -97,6 +95,5 @@ AUTO-CLEAR     HOLD-FOR-REVIEW    AUTO-ESCALATE
        │  Counterfactual → What  │
        │  would have changed?    │
        └─────────────────────────┘
-<img width="1954" height="1334" alt="Cost vs threshold" src="https://github.com/user-attachments/assets/c677135d-e1ed-4792-be6f-fce434d3bee9" />
-<img width="940" height="1008" alt="Plain text" src="https://github.com/user-attachments/assets/6de0908e-8fc6-4392-bae6-0dc1a7dd7fdf" />
+
 
