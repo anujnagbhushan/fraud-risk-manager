@@ -20,3 +20,83 @@ decisions for an audit trail.
 
 (fill in after Day 3-4: PR-AUC, precision/recall at chosen threshold,
 false-positive cost saved vs a naive 0.5 threshold)
+# 🛡️ AI Risk Manager — Fraud Detection
+
+### Razorpay AI Buildathon — Track 02: AI Risk Manager
+
+A cost-sensitive, transaction-level fraud-risk management system that goes beyond a simple fraud prediction.
+
+The system:
+
+- Predicts fraud risk using XGBoost
+- Uses a cost-sensitive decision threshold instead of blindly using 0.5
+- Explains individual predictions using SHAP
+- Generates counterfactual explanations showing what change could have moved a transaction below the risk threshold
+- Routes transactions into `AUTO-CLEAR`, `HOLD-FOR-REVIEW`, or `AUTO-ESCALATE`
+- Allows a human reviewer to verify the decision
+- Logs review decisions for an audit trail
+
+---
+
+## 🎥 5-Minute Demo
+
+> Add the final YouTube video link here.
+
+[Watch the 5-minute project demo](https://youtu.be/LVoyHEVfVZU)
+
+---
+
+## 🚨 Problem
+
+Fraud detection is not only a classification problem.
+
+A fraud-risk system has to answer several operational questions:
+
+1. How risky is this transaction?
+2. When should the system flag it?
+3. What caused the model to flag it?
+4. What change could have prevented the flag?
+5. Should the transaction be cleared automatically or sent to a human?
+6. Can the decision be reviewed later?
+
+This project builds a complete risk-management pipeline around the fraud prediction model.
+
+---
+
+## 🧠 Solution
+
+The system follows this pipeline:
+
+```text
+Transaction
+     │
+     ▼
+XGBoost Fraud Model
+     │
+     ▼
+Fraud Risk Probability
+     │
+     ▼
+Cost-Sensitive Decision Policy
+     │
+     ├───────────────┬──────────────────┐
+     ▼               ▼                  ▼
+AUTO-CLEAR     HOLD-FOR-REVIEW    AUTO-ESCALATE
+                     │
+                     ▼
+               Human Review
+                     │
+                     ▼
+                Audit Log
+
+
+       ┌─────────────────────────┐
+       │      Explainability     │
+       │                         │
+       │  SHAP → Why?            │
+       │  Counterfactual → What  │
+       │  would have changed?    │
+       └─────────────────────────┘
+<img width="1954" height="1334" alt="Cost vs threshold" src="https://github.com/user-attachments/assets/c677135d-e1ed-4792-be6f-fce434d3bee9" />
+<img width="940" height="1008" alt="Plain text" src="https://github.com/user-attachments/assets/6de0908e-8fc6-4392-bae6-0dc1a7dd7fdf" />
+
